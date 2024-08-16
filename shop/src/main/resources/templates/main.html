@@ -1,0 +1,403 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+    layout:decorate="~{layout}">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MAIN</title>
+
+    <link rel="stylesheet" type="text/css" th:href="@{/css/main/main.css}" />
+
+</head>
+
+<body>
+
+    <div layout:fragment="content">
+        <div class="slider_body">
+            <div class="slider">
+                <button class="slider--btn slider--btn__prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m15 18-6-6 6-6" />
+                    </svg>
+                </button>
+
+                <div class="slides__wrapper">
+                    <div class="slides">
+                        <!-- slide 1 -->
+                        <div class="slide" data-current>
+                            <div class="slide__inner">
+                                <div class="slide--image__wrapper">
+                                    <img class="slide--image"
+                                        src="https://devloop01.github.io/voyage-slider/images/scotland-mountains.jpg"
+                                        alt="Image 1" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide__bg" data-current></div>
+
+                        <!-- slide 2 -->
+                        <div class="slide" data-next>
+                            <div class="slide__inner">
+                                <div class="slide--image__wrapper">
+                                    <img class="slide--image" src="
+        https://devloop01.github.io/voyage-slider/images/machu-pichu.jpg" alt="Image 2" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide__bg" data-next></div>
+
+                        <!-- slide 3 -->
+                        <div class="slide" data-previous>
+                            <div class="slide__inner">
+                                <div class="slide--image__wrapper">
+                                    <img class="slide--image"
+                                        src="https://devloop01.github.io/voyage-slider/images/chamonix.jpg"
+                                        alt="Image 3" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide__bg" data-previous></div>
+                    </div>
+                    <div class="slides--infos">
+                        <!-- Slide Info 1 -->
+                        <div class="slide-info" data-current>
+                            <div class="slide-info__inner">
+                                <div class="slide-info--text__wrapper">
+                                    <div data-title class="slide-info--text">
+                                        <span>Highlands</span>
+                                    </div>
+                                    <div data-subtitle class="slide-info--text">
+                                        <span>Scotland</span>
+                                    </div>
+                                    <div data-description class="slide-info--text">
+                                        <span>The mountains are calling</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide Info 2 -->
+                        <div class="slide-info" data-next>
+                            <div class="slide-info__inner">
+                                <div class="slide-info--text__wrapper">
+                                    <div data-title class="slide-info--text">
+                                        <span>Machu Pichu</span>
+                                    </div>
+                                    <div data-subtitle class="slide-info--text">
+                                        <span>Peru</span>
+                                    </div>
+                                    <div data-description class="slide-info--text">
+                                        <span>Adventure is never far away</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide Info 3 -->
+                        <div class="slide-info" data-previous>
+                            <div class="slide-info__inner">
+                                <div class="slide-info--text__wrapper">
+                                    <div data-title class="slide-info--text">
+                                        <span>Chamonix</span>
+                                    </div>
+                                    <div data-subtitle class="slide-info--text">
+                                        <span>France</span>
+                                    </div>
+                                    <div data-description class="slide-info--text">
+                                        <span>Let your dreams come true</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="slider--btn slider--btn__next">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="m9 18 6-6-6-6" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="list">
+            <h1>추천 상품</h1>
+            <div class="btn_list">
+                <button type="button">신상</button>
+                <button type="button">인기</button>
+                <button type="button">상의</button>
+                <button type="button">팬츠</button>
+            </div>
+            <div class="list_sub">
+                <div class="list_items">
+                    <ul class="items">
+                        <li class="item">
+                            <div class="item-image">
+                                <a href="/" class="image">
+                                    <img src="https://img.sonyunara.com/files/goods/283440/1_662201603784e_0.png.webp"
+                                        alt="퍼스널 퍼프 반팔 블라우스">
+                                </a>
+                            </div>
+                            <div class="item-content">
+                                <div class="info">
+                                    <div class="pull-left"></div>
+                                </div>
+                                <div class="subject">
+                                    <a href="/">퍼스널 퍼프 반팔 블라우스</a>
+                                </div>
+                                <div class="info">
+                                    <div class="pull-left">
+                                        <span class="discount">25<em>%</em></span>
+                                        <span class="price">17,900</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <!-- 이 밑으로 삭제 후 for문으로 리스트 출력 -->
+
+                        <li class="item">
+                            <div class="item-image">
+                                <a href="/" class="image">
+                                    <img src="https://img.sonyunara.com/files/goods/503985/1_65c4841f53b77_1.png.webp" alt="에이 레터링 배색 오버핏 맨투맨">
+                                </a>
+                            </div>
+                            <div class="item-content">
+                                <div class="info">
+                                    <div class="pull-left"></div>
+                                </div>
+                                <div class="subject">
+                                    <a href="/">에이 레터링 배색 오버핏 맨투맨</a>
+                                </div>
+                                <div class="info">
+                                    <div class="pull-left">
+                                        <span class="discount">25<em>%</em></span>
+                                        <span class="price">17,900</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="item-image">
+                                <a href="/" class="image">
+                                    <img src="https://img.sonyunara.com/files/goods/70334/1_65c1ea5159c5d_0.png.webp" alt="(9컬러)나인 오버핏 베이직 무지 맨투맨">
+                                </a>
+                            </div>
+                            <div class="item-content">
+                                <div class="info">
+                                    <div class="pull-left"></div>
+                                </div>
+                                <div class="subject">
+                                    <a href="/">(9컬러)나인 오버핏 베이직 무지 맨투맨</a>
+                                </div>
+                                <div class="info">
+                                    <div class="pull-left">
+                                        <span class="discount">25<em>%</em></span>
+                                        <span class="price">17,900</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="item-image">
+                                <a href="/" class="image">
+                                    <img src="https://img.sonyunara.com/files/goods/592918/1717486714_5.jpg.webp" alt="(살안타템/12컬러) 어도럴 린넨 니트 브이넥 여름 가디건">
+                                </a>
+                            </div>
+                            <div class="item-content">
+                                <div class="info">
+                                    <div class="pull-left"></div>
+                                </div>
+                                <div class="subject">
+                                    <a href="/">(살안타템/12컬러) 어도럴 린넨 니트 브이넥 여름 가디건</a>
+                                </div>
+                                <div class="info">
+                                    <div class="pull-left">
+                                        <span class="discount">25<em>%</em></span>
+                                        <span class="price">17,900</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="item-image">
+                                <a href="/" class="image">
+                                    <img src="https://img.sonyunara.com/files/goods/236733/1_65eabef9a97bc_0.png.webp" alt="레브 스퀘어넥 골지 크롭 나시">
+                                </a>
+                            </div>
+                            <div class="item-content">
+                                <div class="info">
+                                    <div class="pull-left"></div>
+                                </div>
+                                <div class="subject">
+                                    <a href="/">레브 스퀘어넥 골지 크롭 나시</a>
+                                </div>
+                                <div class="info">
+                                    <div class="pull-left">
+                                        <span class="discount">25<em>%</em></span>
+                                        <span class="price">17,900</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="item-image">
+                                <a href="/" class="image">
+                                    <img src="https://img.sonyunara.com/files/goods/230377/1_65c2d6c6f2a37_0.png.webp" alt="슈가 레터링 포인트 반팔티">
+                                </a>
+                            </div>
+                            <div class="item-content">
+                                <div class="info">
+                                    <div class="pull-left"></div>
+                                </div>
+                                <div class="subject">
+                                    <a href="/">슈가 레터링 포인트 반팔티</a>
+                                </div>
+                                <div class="info">
+                                    <div class="pull-left">
+                                        <span class="discount">25<em>%</em></span>
+                                        <span class="price">17,900</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="item-image">
+                                <a href="/" class="image">
+                                    <img src="https://img.sonyunara.com/files/goods/600498/1718935196_5.jpg.webp">
+                                </a>
+                            </div>
+                            <div class="item-content">
+                                <div class="info">
+                                    <div class="pull-left"></div>
+                                </div>
+                                <div class="subject">
+                                    <a href="/">[숏,베이직,롱/S~2XL] 단점 커버! 하이웨스트 핀턱 와이드 여름 슬랙스[P]</a>
+                                </div>
+                                <div class="info">
+                                    <div class="pull-left">
+                                        <span class="discount">25<em>%</em></span>
+                                        <span class="price">17,900</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="item-image">
+                                <a href="/" class="image">
+                                    <img src="https://img.sonyunara.com/files/goods/496353/1_65c457d06e770_3.png.webp">
+                                </a>
+                            </div>
+                            <div class="item-content">
+                                <div class="info">
+                                    <div class="pull-left"></div>
+                                </div>
+                                <div class="subject">
+                                    <a href="/">(6컬러) 핸드워머 슬림핏 라운드 크롭 니트티(T)</a>
+                                </div>
+                                <div class="info">
+                                    <div class="pull-left">
+                                        <span class="discount">25<em>%</em></span>
+                                        <span class="price">17,900</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="item-image">
+                                <a href="/" class="image">
+                                    <img src="https://img.sonyunara.com/files/goods/43391/1_65c1e98d44a0a_1.png.webp">
+                                </a>
+                            </div>
+                            <div class="item-content">
+                                <div class="info">
+                                    <div class="pull-left"></div>
+                                </div>
+                                <div class="subject">
+                                    <a href="/">[by SS] 퍼프 (10EA)</a>
+                                </div>
+                                <div class="info">
+                                    <div class="pull-left">
+                                        <span class="discount">25<em>%</em></span>
+                                        <span class="price">17,900</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="item-image">
+                                <a href="/" class="image">
+                                    <img src="https://img.sonyunara.com/files/goods/170501/1_65c1f60a64c82_1.png.webp">
+                                </a>
+                            </div>
+                            <div class="item-content">
+                                <div class="info">
+                                    <div class="pull-left"></div>
+                                </div>
+                                <div class="subject">
+                                    <a href="/">나이스데이 레터링 볼캡</a>
+                                </div>
+                                <div class="info">
+                                    <div class="pull-left">
+                                        <span class="discount">25<em>%</em></span>
+                                        <span class="price">17,900</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="item-image">
+                                <a href="/" class="image">
+                                    <img src="https://img.sonyunara.com/files/goods/65812/1601012853_20.jpg.webp">
+                                </a>
+                            </div>
+                            <div class="item-content">
+                                <div class="info">
+                                    <div class="pull-left"></div>
+                                </div>
+                                <div class="subject">
+                                    <a href="/">레이어드조거팬츠(3단쭈리)</a>
+                                </div>
+                                <div class="info">
+                                    <div class="pull-left">
+                                        <span class="discount">25<em>%</em></span>
+                                        <span class="price">17,900</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="item-image">
+                                <a href="/" class="image">
+                                    <img src="https://img.sonyunara.com/files/goods/299102/1662606981_0.jpg.webp">
+                                </a>
+                            </div>
+                            <div class="item-content">
+                                <div class="info">
+                                    <div class="pull-left"></div>
+                                </div>
+                                <div class="subject">
+                                    <a href="/">7days시리즈 기장별 박시 후드집업 2종</a>
+                                </div>
+                                <div class="info">
+                                    <div class="pull-left">
+                                        <span class="discount">25<em>%</em></span>
+                                        <span class="price">17,900</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <script th:src="@{/js/main.js}"></script>
+
+    </div>
+
+</body>
+
+</html>
